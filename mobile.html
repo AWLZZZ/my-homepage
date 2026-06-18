@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>林安的数字分身 • 手机版</title>
+  <meta name="description" content="林安的个人主页手机版，探索他的内容策划作品、AI产品实验，并与他的数字分身进行对话。">
+  <!-- Google Fonts Outfit & Noto Sans SC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+  <div class="mobile-app">
+    
+    <!-- 头部：关于我个人卡片 (缩减版) -->
+    <header class="mobile-profile-header">
+      <div class="profile-info-group">
+        <div class="mobile-avatar-wrapper">
+          <div class="mobile-avatar-glow"></div>
+          <img src="avatar.jpg" alt="林安" class="mobile-avatar">
+        </div>
+        <div class="mobile-name-group">
+          <h1 class="mobile-name">林安</h1>
+          <p class="mobile-tagline">用 AI 做产品的内容策划</p>
+        </div>
+      </div>
+      
+      <!-- 快捷联系 -->
+      <div class="mobile-contact-group">
+        <a href="mailto:linan_content@outlook.com" class="mobile-contact-btn" title="发送邮件">
+          <svg class="mobile-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          Email
+        </a>
+        <div class="mobile-contact-btn wechat-trigger" title="复制微信号">
+          <svg class="mobile-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+          WeChat
+        </div>
+      </div>
+    </header>
+
+    <!-- 主体：数字分身聊天室 -->
+    <section class="mobile-chat-container">
+      <div class="mobile-chat-header">
+        <span class="mobile-status-dot"></span>
+        <span>林安的数字分身 • 在线</span>
+      </div>
+      
+      <!-- 消息列表 -->
+      <div class="chat-messages" id="chatMessages">
+        <div class="message-bubble bot-message">
+          <div class="msg-content">
+            你好呀！👋 我是林安的数字分身。
+            <br>最近我正在搭建自己的主页、整理作品集。你有什么想问我的吗？可以横滑点击下方的推荐问题，或直接在输入框里和我聊聊！
+          </div>
+          <span class="msg-time" id="greeting-time">10:00</span>
+        </div>
+      </div>
+
+      <!-- 横滑快捷提问 Chips 区域 -->
+      <div class="mobile-quick-questions">
+        <div class="chips-scroll-wrapper">
+          <button class="chip-btn" data-question="你现在在做什么？">✨ 你现在在做什么？</button>
+          <button class="chip-btn" data-question="你有哪些作品？">📂 你有哪些作品？</button>
+          <button class="chip-btn" data-question="怎么联系你？">📧 怎么联系你？</button>
+        </div>
+      </div>
+
+      <!-- 底部输入栏 -->
+      <form class="chat-input-area" id="chatInputForm">
+        <input type="text" id="userInput" placeholder="问问林安的经历、作品、兴趣..." required autocomplete="off">
+        <button type="submit" id="sendBtn" aria-label="发送">
+          <svg class="send-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- 共享同一个对话逻辑 JS -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

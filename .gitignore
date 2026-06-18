@@ -1,0 +1,23 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Local env files (Crucial: Prevents API key leakage to GitHub!)
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+dist-ssr/
+
+# Editor/OS directories
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dev local caches
+.npm-cache/
+.vite/
+*.log

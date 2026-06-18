@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>林安的个人主页 & 数字分身</title>
+  <meta name="description" content="林安的个人主页。探索他的内容策划作品、AI产品实验，以及与他的数字分身实时聊天互动。">
+  <!-- Google Fonts Outfit & Noto Sans SC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 背景流光装饰 -->
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
+
+    <main class="profile-card">
+      
+      <!-- 左栏：个人信息展示 -->
+      <section class="info-panel" aria-label="关于我">
+        <div class="avatar-wrapper">
+          <div class="avatar-glow"></div>
+          <img id="avatar" src="avatar.jpg" alt="林安的头像" class="avatar-image">
+        </div>
+        
+        <header class="profile-header">
+          <h1 class="profile-name">林安</h1>
+          <p class="profile-tagline">一个正在学习用 AI 做产品的内容策划</p>
+        </header>
+
+        <hr class="divider">
+
+        <div class="info-details">
+          <div class="info-section">
+            <h2 class="info-title">
+              <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+              我现在主要在做
+            </h2>
+            <p class="info-content">整理自己的作品和写作方向，探索内容表达与 AI 产品的融合可能性。</p>
+          </div>
+
+          <div class="info-section">
+            <h2 class="info-title">
+              <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              我的兴趣
+            </h2>
+            <div class="interest-tags">
+              <span class="tag">🤖 AI 应用</span>
+              <span class="tag">✍️ 写作</span>
+              <span class="tag">✈️ 旅行</span>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2 class="info-title">
+              <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              我的特质
+            </h2>
+            <p class="info-content highlight-text">💬 喜欢把复杂问题讲成人话。不管是多难懂的技术或者概念，我都习惯用通俗有趣的语言来拆解。</p>
+          </div>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:linan_content@outlook.com" class="contact-item" title="发送邮件">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Email
+          </a>
+          <div class="contact-item wechat-trigger" title="微信号：linan_studio">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+            WeChat
+          </div>
+        </div>
+      </section>
+
+      <!-- 右栏：数字分身聊天区 -->
+      <section class="chat-panel" aria-label="数字分身聊天区">
+        <header class="chat-header">
+          <div class="clone-avatar-wrapper">
+            <img src="avatar.jpg" alt="林安的分身" class="clone-avatar">
+            <span class="status-indicator"></span>
+          </div>
+          <div class="chat-title-group">
+            <h2 class="chat-title">林安的数字分身</h2>
+            <p class="chat-subtitle">基于林安的个人特质训练，随时为您解答</p>
+          </div>
+        </header>
+
+        <!-- 聊天信息展示区 -->
+        <div class="chat-messages" id="chatMessages">
+          <!-- 初始问候消息 -->
+          <div class="message-bubble bot-message">
+            <div class="msg-content">
+              你好呀！👋 我是林安的数字分身。
+              <br>我最近在搭建自己的个人主页并整理作品集。你有什么想问林安的吗？可以点击下方的快捷问题，或者直接输入文字与我对话！
+            </div>
+            <span class="msg-time" id="greeting-time">10:00</span>
+          </div>
+        </div>
+
+        <!-- 快速提问 Chips 区域 -->
+        <div class="quick-questions">
+          <button class="chip-btn" data-question="你现在在做什么？">✨ 你现在在做什么？</button>
+          <button class="chip-btn" data-question="你有哪些作品？">📂 你有哪些作品？</button>
+          <button class="chip-btn" data-question="怎么联系你？">📧 怎么联系你？</button>
+        </div>
+
+        <!-- 底部输入框 -->
+        <form class="chat-input-area" id="chatInputForm">
+          <input type="text" id="userInput" placeholder="输入你想问林安的问题..." required autocomplete="off">
+          <button type="submit" id="sendBtn" aria-label="发送消息">
+            <svg class="send-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
