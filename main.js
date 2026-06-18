@@ -86,8 +86,9 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 // --- Gemini API Configurations ---
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+// API Key 已移至服务器端（Vercel Serverless Function: /api/chat）
+// 前端只与自己的代理接口通信，Key 不再暴露给浏览器
+const API_URL = '/api/chat';
 
 const SYSTEM_PROMPT = `你现在是“林安的数字分身” (林安的AI Clone)。你正在林安的个人网页上与访客（朋友、潜在合作伙伴、面试官）对话。
 请完全扮演这个角色，并基于以下信息回答访客的问题。
@@ -243,13 +244,11 @@ async function replyAsBot(inputText) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        contents: [
+        // 只发送对话历史，system prompt 在服务器端安全保存
+        messages: [
           ...chatHistory,
           { role: 'user', parts: [{ text: inputText }] }
-        ],
-        systemInstruction: {
-          parts: [{ text: SYSTEM_PROMPT }]
-        }
+        ]
       })
     });
 
@@ -258,7 +257,7 @@ async function replyAsBot(inputText) {
     }
 
     const data = await response.json();
-    matchedReply = data.candidates[0].content.parts[0].text;
+    matchedReply = data.reply;
 
     // Record to history
     chatHistory.push({ role: 'user', parts: [{ text: inputText }] });
